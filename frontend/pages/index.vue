@@ -72,6 +72,8 @@ function applyFilters(filters) {
 
 function handleCloseForm() {
   showForm.value = false;
-  applyFilters({});
+  applyFilters({}); 
+  // TODO -> Valutare come gestire il filtraggio dei dati, reset filtri (emit 'reset')?
+  // gestione defineExpose?
 }
 </script>

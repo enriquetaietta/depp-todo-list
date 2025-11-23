@@ -19,6 +19,7 @@ def get_db():
     finally:
         db.close()
 
+# TODO -> Gestire i modelli Pydantic in moduli dedicati
 # Modello Pydantic per la risposta GET
 class TodoResponse(BaseModel):
     id: Optional[UUID]

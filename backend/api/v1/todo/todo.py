@@ -19,6 +19,7 @@ def get_db():
     finally:
         db.close()
 
+# TODO -> Gestire i modelli Pydantic in moduli separati.
 # Modello Pydantic per la risposta GET
 class TodoResponse(BaseModel):
     id: UUID
@@ -77,9 +78,12 @@ async def get_todos(
 
     todos = query.all()
 
-    # TODO -> Da gestire la colonna TAG
+    # TODO -> Da gestire la colonna tags
+    # Bisogna recuperare i tag dalla tabella relazionale per ciascun TODO
+
     return todos
 
+# TODO -> Gestire i modelli Pydantic in moduli separati.
 # Modello Pydantic per la richiesta POST
 class TodoCreate(BaseModel):
     title: str = Field(..., max_length=200)
@@ -120,6 +124,11 @@ async def create_todo(todo: TodoCreate, db: Session = Depends(get_db)):
                 db.add(db_tag)
                 print("INSERT TAG")
                 db.flush()  # Ottieni l'id del tag prima di committare
+            else:
+                raise HTTPException(
+                    status_code=status.HTTP_400_BAD_REQUEST,
+                    detail="Tag already exists"
+                )
             tag_ids.append(db_tag.id)
 
         # Crea le relazioni tra todo e tag
