@@ -1,0 +1,152 @@
+body {
+  background-color: #0d1117;
+  color: #c9d1d9;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.main-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.content-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+}
+
+.content-main {
+  grid-column: 2 / span 4;
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 32px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.separator {
+  border-top: 1px solid #30363d;
+  margin: 24px 0;
+}
+
+.todo-card {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 16px;
+  margin-bottom: 8px;
+  transition: border-color 0.2s ease;
+}
+
+.todo-card:hover {
+  border-color: #58a6ff;
+}
+
+.todo-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #58a6ff;
+}
+
+.todo-description {
+  color: #8b949e;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.tag {
+  display: inline-block;
+  background: #21262d;
+  color: #79c0ff;
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-right: 6px;
+  margin-bottom: 6px;
+}
+
+.filters-container {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #30363d;
+}
+
+.filter-input {
+  flex: 1;
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 8px 12px;
+  color: #c9d1d9;
+  font-size: 14px;
+}
+
+.filter-select {
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 8px 12px;
+  color: #c9d1d9;
+  font-size: 14px;
+  min-width: 120px;
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: #58a6ff;
+}
+
+.toggle-button {
+  background: #238636;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.toggle-button:hover {
+  background: #2ea043;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status-open {
+  background: #238636;
+  color: white;
+}
+
+.status-closed {
+  background: #cb2431;
+  color: white;
+}
+
+.priority-low {
+  color: #79b8ff;
+}
+
+.priority-medium {
+  color: #f8c517;
+}
+
+.priority-high {
+  color: #cb2431;
+}
+
