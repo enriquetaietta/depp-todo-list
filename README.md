@@ -48,6 +48,7 @@ Applicazione **Full-Stack** composta da:
    ```bash
    fastapi dev main.py
    ```
+   All'interno della directory backend.
 
 2. **Endpoints disponibili**
 
@@ -63,7 +64,7 @@ Esegui i test con:
 pytest
 ```
 
-All'interno della directory backend.
+All'interno della directory root.
 ---
 
 # 🎨 Frontend
@@ -104,7 +105,7 @@ La scelta di **FastAPI** è stata motivata dalla volontà di sperimentare un fra
 * Tipizzazione integrata
 * Modello di sviluppo molto vicino a standard già conosciuti
 
-### Difficoltà riscontrate e note di sviluppo
+### Difficoltà riscontrate, mancanze, annotazioni
 
 * Adattamento alla gestione delle rotte non basata sulla struttura delle directory (come avviene in Next.js).
 * Implementazione parziale della gestione dei **Tag**, con tabelle e rotte dedicate ancora da completare.
@@ -130,13 +131,14 @@ La scelta di **Nuxt** deriva dalla volontà di rimettere mano al framework dopo 
 * **Tailwind CSS** per lo styling
 * **vue-toastification** per le notifiche
 
-Come per il backend, è stata avviata ma non completata la gestione dei **Tag** con componenti dedicati.
-
-### Difficoltà riscontrate
+### Difficoltà riscontrate, mancanze, annotazioni
 
 * Problemi iniziali con le versioni di Node e npm.
 * Incompatibilità tra pacchetti pensati per versioni precedenti di Vue/Nuxt.
 * Gestione delle dipendenze in un ecosistema ancora in evoluzione dopo Nuxt 3.
+* Come per il backend, è stata avviata ma non completata la gestione dei **Tag** con componenti dedicati.
+* Manca una corretta gestione del reset dei filtri durante le varie azioni
+* Manca una gestione corretta di un file .env
 
 ---
 
